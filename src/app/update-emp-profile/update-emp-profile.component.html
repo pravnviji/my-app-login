@@ -1,0 +1,28 @@
+<div class="center" >
+    <div class="loginCenter">
+        <h2>Update Appliance's List</h2>
+    </div>
+   
+        <label for="empId" class="width">Serial No</label>
+        <input type="number" [(ngModel)]="empData.serialNo" /><br />
+
+        <label for="empName" class="width">Brand</label> 
+        <input type="text" [(ngModel)]="empData.brand" /><br />
+
+        <label for="empPhoneNo" class="width">Model</label> 
+        <input type="text" [(ngModel)]="empData.model" /><br />
+
+        <label for="empCountry" class="width">Price</label> 
+        <input type="number" [(ngModel)]="empData.price" /><br />
+        
+
+        <label for="empProfession" class="width">Status</label> 
+        <input type="text" [(ngModel)]="empData.status" /><br />
+
+        <label for="regDate" class="width">Date:</label> 
+        <input type="date" [ngModel]="empData.regDate | date:'yyyy-mm-dd'"  (ngModel)="empData.regDate=$event"/><br />
+
+        <br>
+        <button (click)="updateEmpProfile()" class="btn btn-success"  >Update</button>
+    
+</div>

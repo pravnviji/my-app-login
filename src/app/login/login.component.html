@@ -1,0 +1,24 @@
+<div class="center">
+    <div class="loginCenter">
+        <h2>Login</h2>
+    </div>
+
+    <div>
+        <small *ngIf='isInvalidLogin'>{{errMsg}}</small>
+    </div>
+
+    <div>
+        Username: <input type="text" name="username" [(ngModel)]="username">
+    </div>
+    <br>
+    <div>
+        Password: <input type="password" name="password" [(ngModel)]="password">
+    </div>
+    <br>
+    <div>
+        <!-- <button (click)=handleLogin() style="margin:px" class="btn btn-success">Login</button> -->
+        <button (click)=handleBasicAuthLogin() style="margin:px" class="btn btn-success">Login</button>
+        <button (click)=handleRegister() style="margin:5px" class="btn btn-success">Register</button>
+        <button (click)=handleResetPasword() style="margin:5px" class="btn btn-success">Forgot password</button>
+    </div>
+</div>

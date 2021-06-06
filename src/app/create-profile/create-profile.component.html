@@ -1,0 +1,31 @@
+<div class="center" >
+    <div class="loginCenter">
+        <h2>Create Profile</h2>
+    </div>
+   
+        <!-- <label for="empId" class="width">ID:</label> 
+        <input type="number" [(ngModel)]="empData.empId" /><br /> -->
+        <form [formGroup]="profileFormGroup" (ngSubmit)="addProfile()">
+        <label  class="width">Serial No:</label> 
+        <input type="text" formControlName="serialNo"/><br />
+
+       <label  class="width">Brand:</label> 
+        <input type="text" formControlName="brand"/><br />
+
+        <label class="width">Model:</label> 
+        <input type="text" formControlName="model" /><br />
+
+        <label  class="width">Price:</label> 
+        <input type="text"formControlName="price"/><br />
+
+        <label  class="width">Status:</label> 
+        <input type="text"  formControlName="status"/><br />
+
+        <label  class="width">RegDate:</label> 
+        <input type="date" formControlName="regDate"/><br />
+    
+
+        <br>
+        <button type ="submit" class="btn btn-success" >Submit</button>
+    </form>
+</div>

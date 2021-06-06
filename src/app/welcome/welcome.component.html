@@ -1,0 +1,43 @@
+
+
+<div>
+  <h3> Appliances Stock List </h3>
+</div>
+
+<div>
+    <small *ngIf='message' class="alert alert-success">{{message}}</small>
+  </div>
+<br>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Serial No</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--   for (Todo todo: todos) {  -->
+      <tr *ngFor="let emp of empDetails">
+        <td>{{emp.serialNo}}</td>
+        <td>{{emp.brand}}</td>
+        <td>{{emp.model}}</td>
+        <td>{{emp.price}}</td>
+        <td>{{emp.status}}</td>
+        <td>{{emp.regDate | date}}</td>
+        <td><button (click)="updateEmpProfile(emp.serialNo)" class="btn btn-success" routerLink="updateEmpProfile">Update</button></td>
+        <td><button (click)="deleteEmpProfile(emp.serialNo)" class="btn btn-warning">Delete</button></td>
+      </tr>
+      <!-- } -->
+    </tbody>
+
+  </table>
+
+  <div><button (click)="addEmpProfile()" class="btn btn-success">Add</button></div>
+</div>

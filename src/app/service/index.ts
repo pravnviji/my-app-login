@@ -1,0 +1,1 @@
+export { ApplianceListService, IApplianceList } from './data/appliance-list-data.service';

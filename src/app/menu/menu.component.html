@@ -1,0 +1,17 @@
+<header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div> <h3 style="color: white">SYNO-COMPUTER'S KL</h3> </div>
+       
+        <div class="hdr-btn-row">
+            <button  *ngIf="hardCodedAuthenticationService.isUserLoggedIn()" routerLink="/home-appliance/Admin" class="hdr-btn">HOME</button>
+            <button  *ngIf="hardCodedAuthenticationService.isUserLoggedIn()" routerLink="/createProfile" class="hdr-btn">ADD ITEMS</button>
+        </div>
+        
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a  *ngIf="!hardCodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+            <li><a  *ngIf="hardCodedAuthenticationService.isUserLoggedIn()" routerLink="/logOut" class="nav-link">Logout</a></li>
+        </ul>
+       
+    </nav>
+
+</header>
